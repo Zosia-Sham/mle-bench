@@ -133,11 +133,12 @@ aide/obfuscated:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: gpt-4o-2024-08-06
-    agent.feedback.model: gpt-4o-2024-08-06
+    agent.code.model: deepseek-coder
+    agent.feedback.model: deepseek-chat
     agent.steps: *step_count
     agent.obfuscate: True
   env_vars:
     <<: *env_vars
-    OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    OPENAI_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+    OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
     OBFUSCATE: "true"
