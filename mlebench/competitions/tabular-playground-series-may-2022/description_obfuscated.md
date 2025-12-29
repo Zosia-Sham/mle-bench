@@ -1,25 +1,17 @@
-# Task
+# Data card
 
-Given simulated manufacturing control data, predict whether the machine is in state `0` or state `1`.
+The dataset contains simulated manufacturing control data split into three CSV files: `train.csv`, `test.csv`, and `sample_submission.csv`. 
+
+`train.csv` includes an `id` column, a set of normalized continuous and categorical features, and a binary label column named `target`. 
+
+`test.csv` includes the same `id` column and feature columns as training data but does not include `target`. 
+
+`sample_submission.csv` provides the required submission schema with columns `id` and `target`, where `target` is a predicted probability for each `id`.
 
 # Metric
 
-Area under the ROC curve.
+AUC
 
-# Submission Format
+# Description
 
-For each `id` in the test set, you must predict a probability for the `target` variable. The file should contain a header and have the following format:
-
-```
-id,target
-900000,0.65
-900001,0.97
-900002,0.02
-etc.
-```
-
-# Dataset
-
-- **train.csv** - the training data, which includes normalized continuous data and categorical data
-- **test.csv** - the test set; your task is to predict binary `target` variable which represents the state of a manufacturing process
-- **sample_submission.csv** - a sample submission file in the correct format
+Predict a binary machine state 0 vs 1 from tabular, simulated manufacturing control features, producing a probability for the positive class for each test record.
