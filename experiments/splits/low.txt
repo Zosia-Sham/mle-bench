@@ -1,6 +1,6 @@
-bms-molecular-translation
-lmsys-chatbot-arena
+aerial-cactus-identification
+detecting-insults-in-social-commentary
+dog-breed-identification
 spooky-author-identification
-stanford-covid-vaccine
 tabular-playground-series-dec-2021
-uw-madison-gi-tract-image-segmentation
+tabular-playground-series-may-2022
