@@ -1,22 +1,15 @@
-# Task
+# Data card
 
-Predict the class of a given image from a synthetic dataset.
+The dataset is a synthetic tabular dataset generated with CTGAN based on the original “Forest Cover Type Prediction” dataset. 
+
+It includes a training split (train.csv) containing feature columns and the target column Cover_Type, a test split (test.csv) containing the same feature columns without the target, and a sample_submission.csv that shows the required submission format. 
+
+Each test row is identified by an Id, and predictions must output one integer Cover_Type class per Id.
 
 # Metric
-Multi-class classification accuracy.
 
-# Submission Format
-For each `Id` in the test set, you must predict the `Cover_Type` class. The file should contain a header and have the following format:
-```
-Id,Cover_Type
-4000000,2
-4000001,1
-4000001,3
-etc.
-```
+CategorizationAccuracy
 
-# Dataset 
+# Description
 
-- train.csv - the training data with the target `Cover_Type` column
-- test.csv - the test set; you will be predicting the `Cover_Type` for each row in this file (the target integer class)
-- sample_submission.csv - a sample submission file in the correct format
+Predict the forest cover type (multi-class label) for each record in a tabular dataset using the provided feature columns.
