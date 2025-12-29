@@ -1,23 +1,13 @@
-# Task
+# Data card
 
-Given a dataset of images of dogs, predict the breed of each image.
+The dataset contains labeled training images and unlabeled test images of dogs, covering 120 distinct breeds. Each image filename serves as a unique `id`. 
+
+Provided files include `train.zip` (training images), `test.zip` (test images), `labels.csv` (mapping from training `id` to breed label), and `sample_submission.csv` (required submission schema with one probability column per breed).
 
 # Metric
 
-Multi Class Log Loss.
+LogLoss
 
-# Submission Format
+# Description
 
-For each image in the test set, you must predict a probability for each of the different breeds. The file should contain a header and have the following format:
-```
-id,affenpinscher,afghan_hound,..,yorkshire_terrier
-000621fb3cbb32d8935728e48679680e,0.0083,0.0,...,0.0083
-etc.
-```
-
-# Dataset Description
-
-- `train.zip` - the training set, you are provided the breed for these dogs
-- `test.zip` - the test set, you must predict the probability of each breed for each image
-- `sample_submission.csv` - a sample submission file in the correct format
-- `labels.csv` - the breeds for the images in the train set
+Classify each dog photo into one of 120 dog breeds by predicting a probability distribution over all breeds for every test image.
