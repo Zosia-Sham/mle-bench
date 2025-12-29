@@ -1,28 +1,23 @@
-# Task
+# Data card
 
-Create a classifier to predict whether an image contains a cactus.
+Modality: RGB aerial imagery thumbnails  
+
+Task type: Supervised binary image classification
+
+Image size: 32 x 32 pixels (uniformly resized)  
+
+Labels: `has_cactus` where 1 indicates the image contains a cactus and 0 indicates it does not  
+
+Training data: `train/` image directory and `train.csv` with filenames (`id`) and labels  
+
+Test data: `test/` image directory with filenames (`id`) and no labels provided  
+
+Submission format: CSV with columns `id,has_cactus`, where `has_cactus` is a predicted probability for each test image.
 
 # Metric
 
-Area under the ROC curve.
+AUC
 
-# Submission Format
+# Description
 
-For each ID in the test set, you must predict a probability for the `has_cactus` variable. The file should contain a header and have the following format:
-
-```
-id,has_cactus
-000940378805c44108d287872b2f04ce.jpg,0.5
-0017242f54ececa4512b4d7937d1e21e.jpg,0.5
-001ee6d8564003107853118ab87df407.jpg,0.5
-etc.
-```
-
-# Dataset
-
-This dataset contains a large number of 32 x 32 thumbnail images containing aerial photos of a cactus. The file name of an image corresponds to its `id`.
-
-- **train/** - the training set images
-- **test/** - the test set images (you must predict the labels of these)
-- **train.csv** - the training set labels, indicates whether the image has a cactus (`has_cactus = 1`)
-- **sample_submission.csv** - a sample submission file in the correct format
+Build a binary classifier that predicts whether a 32 x 32 aerial thumbnail image contains a columnar cactus (Neobuxbaumia tetetzo).
